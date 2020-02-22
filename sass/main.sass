@@ -1,0 +1,194 @@
+* 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+#root1
+    margin: 200px 10% 0 10%
+    width: 80%
+    overflow: hidden
+    border-radius: 10px
+    #root2 
+        width: 100%
+        padding-bottom: 40%
+        position: relative
+        background-image: url(../img/back.jpg)
+        background-repeat: round
+
+#root
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    .galContainer
+        width: 85%
+        overflow: hidden
+        margin: 0 auto
+        position: relative
+        display: flex
+        align-items: center   
+        .film
+            display: flex
+            align-items: flex-start
+            transition: margin-left 1s // margin-left СТОИТ указать!!!
+            color: black
+            .card
+                position: relative
+                height: 200px
+                color: white
+                padding: 5px
+                font-size: 20px
+                .face
+                    width: 100px
+                    height: 100px
+                    border-radius: 50%
+                    overflow: hidden
+                    position: absolute
+                    top: 15%
+                    left: 5px
+                .name
+                    position: absolute
+                    bottom: 15%
+                    width: 100px
+                    text-align: center
+                .quote
+                    position: absolute
+                    top: 15%
+                    left: 120px
+                .text
+                    position: absolute
+                    bottom: 15%
+                    left: 120px
+    .pointContainer
+        position: absolute
+        transform: translateX(-50%)
+        bottom: 20px
+        left: 50%
+        .point
+            display: inline-block
+            cursor: pointer
+            width: 15px
+            height: 15px
+            border: 2px solid white
+            border-radius: 50%
+            margin: 0 10px
+            &:hover
+                background-color: darkgrey
+                border: none
+        .active
+            background-color: white
+    .leftBtn, .rightBtn
+        position: absolute
+        top: 40%
+        height: 20%
+        user-select: none
+        font-size: 60px
+        font-weight: bold
+        color: white
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+            color: darkgrey
+    .leftBtn
+        left: 5px
+    .rightBtn
+        right: 5px
+
+@media screen and (max-width: 1550px)
+    
+    #root
+        .galContainer 
+            .film
+                .card
+                    font-size: 18px
+
+@media screen and (max-width: 1200px)
+    
+    #root
+        .galContainer 
+            .film
+                .card
+                    height: 220px
+                    font-size: 16px
+
+
+@media screen and (max-width: 970px)
+
+    #root
+        .galContainer 
+            .film
+                .card
+                    height: 300px
+                    .face
+                        top: 25%
+                    .name                   
+                        bottom: 25%
+                    .quote
+                        top: 20%
+                    .text
+                        bottom: 20%
+        .pointContainer
+            bottom: 5px
+
+@media screen and (max-width: 750px)
+
+    #root
+        .galContainer 
+            .film
+                .card
+                    height: 250px
+                    font-size: 14px
+                    .face
+                        top: 30%
+                        width: 75px
+                        height: 75px
+                        img
+                            width: 75px
+                    .name                   
+                        bottom: 30%
+                        width: 75px
+                    .quote
+                        top: 20%
+                        left: 85px
+                    .text
+                        bottom: 20%
+                        left: 85px
+        .pointContainer
+            bottom: 5px
+        .leftBtn, .rightBtn
+            font-size: 40px
+
+@media screen and (max-width: 660px)
+
+    #root
+        .galContainer 
+            .film
+                .card
+                    height: 210px
+                    font-size: 11px
+                    .face
+                        top: 30%
+                        width: 50px
+                        height: 50px
+                        img
+                            width: 50px
+                    .name                   
+                        bottom: 30%
+                        width: 50px
+                    .quote
+                        top: 20%
+                        left: 60px
+                    .text
+                        bottom: 20%
+                        left: 60px
+        .pointContainer
+            bottom: 0
+            .point
+                width: 8px
+                height: 8px
+        .leftBtn, .rightBtn
+            font-size: 30px
